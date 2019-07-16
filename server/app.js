@@ -1,10 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
 const cors = require('cors')
 
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors())
 
 app.get("/", (req, res) => {
@@ -19,7 +18,6 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
-
 
 const fileUpload = require('express-fileupload');
 
