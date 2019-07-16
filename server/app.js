@@ -11,10 +11,6 @@ app.get("/", (req, res) => {
   res.status(200).json({message: 'DragMe Upload Image BE'});
 });
 
-app.post('/upload/', (res, req) => {
-    console.log(req.files)
-});
-
 const cloudinary = require('cloudinary');
 
 
