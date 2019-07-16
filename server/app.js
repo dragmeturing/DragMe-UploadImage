@@ -26,7 +26,7 @@ app.use(fileUpload());
 app.post('/upload', (req, res) => {
   const newPhoto = req.files['photo'].data.toString('base64');
   const type = req.files['photo'].mimetype;
-  console.log('heroku check', request.files)
+  console.log('heroku check', req.files)
 
   cloudinary.v2.uploader.upload(`data:${type};base64,${newPhoto}`, (err, photo) => {
     if (err) {
