@@ -43,3 +43,5 @@ app.post('/upload', (req, res) => {
     }
   })
 })
+
+module.exports = app
