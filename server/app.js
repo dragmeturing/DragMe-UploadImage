@@ -10,6 +10,9 @@ const key = require('../key')
 app.use(bodyParser.json());
 app.use(cors())
 
+app.get("/", (req, res) => {
+  res.status(200).json({message: 'Palette Picker BE'});
+});
 
 app.post('/upload/', (res, req) => {
     console.log(req.files)
