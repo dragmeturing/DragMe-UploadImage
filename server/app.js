@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 app.get("/", (req, res) => {
-  res.status(200).json({message: 'Palette Picker BE'});
+  res.status(200).json({message: 'DragMe Upload Image BE'});
 });
 
 app.post('/upload/', (res, req) => {
