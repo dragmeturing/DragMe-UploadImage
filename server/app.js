@@ -22,10 +22,10 @@ cloudinary.config({
 app.use(fileUpload());
 
 app.post("/upload", (req, res) => {
-  console.log("heroku test api", process.env.CLOUDINARY_API_KEY);
   const newPhoto = req.files["photo"].data.toString("base64");
+  console.log('heroku newphoto', newPhoto)
   const type = req.files["photo"].mimetype;
-  console.log("heroku check", req.files);
+  console.log('heroku type', type)
 
   cloudinary.v2.uploader.upload(
     `data:${type};base64,${newPhoto}`,
