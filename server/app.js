@@ -24,6 +24,7 @@ const fileUpload = require('express-fileupload');
 app.use(fileUpload());
 
 app.post('/upload', (req, res) => {
+  console.log('heroku test api', process.env.CLOUDINARY_API_KEY)
   const newPhoto = req.files['photo'].data.toString('base64');
   const type = req.files['photo'].mimetype;
   console.log('heroku check', req.files)
